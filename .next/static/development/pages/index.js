@@ -56,7 +56,35 @@ var Header = function Header() {
       lineNumber: 11
     },
     __self: this
-  }, "About")));
+  }, "About")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    href: "/theme",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 13
+    },
+    __self: this
+  }, __jsx("a", {
+    style: linkStyle,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 14
+    },
+    __self: this
+  }, "Theme")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    href: "/input",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 16
+    },
+    __self: this
+  }, __jsx("a", {
+    style: linkStyle,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 17
+    },
+    __self: this
+  }, "Input")));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Header);
@@ -8483,7 +8511,8 @@ Index.getInitialProps = function _callee(_ref2) {
       }
     }
   });
-}; // const API_URL = 'https://api.github.com';
+}; //////////////////////////////////////
+// const API_URL = 'https://api.github.com';
 // const fetcher = async path => {
 //   const res = await fetch(API_URL + path);
 //   const json = await res.json();
@@ -8501,7 +8530,7 @@ Index.getInitialProps = function _callee(_ref2) {
 
 /***/ }),
 
-/***/ 1:
+/***/ 3:
 /*!****************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2Fhome%2Fgwl%2FSAMANDAR%2Fnext-training%2Fpages%2Findex.js ***!
   \****************************************************************************************************************************/
@@ -8524,5 +8553,5 @@ module.exports = dll_5f137288facb1107b491;
 
 /***/ })
 
-},[[1,"static/runtime/webpack.js"]]]);
+},[[3,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=index.js.map

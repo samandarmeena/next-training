@@ -10,6 +10,12 @@ const Header = () => (
     <Link href='/about'>
       <a style={linkStyle}>About</a>
     </Link>
+    <Link href='/theme'>
+      <a style={linkStyle}>Theme</a>
+    </Link>
+    <Link href='/input'>
+      <a style={linkStyle}>Input</a>
+    </Link>
   </div>
 );
 export default Header;

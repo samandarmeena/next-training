@@ -14,6 +14,7 @@ Index.getInitialProps = async ({ req }) => {
   const json = await res.json();
   return { stars: json.stargazers_count };
 };
+//////////////////////////////////////
 // const API_URL = 'https://api.github.com';
 // const fetcher = async path => {
 //   const res = await fetch(API_URL + path);

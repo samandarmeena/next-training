@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 6);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -148,7 +148,35 @@ const Header = () => __jsx("div", {
     lineNumber: 11
   },
   __self: undefined
-}, "About")));
+}, "About")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+  href: "/theme",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 13
+  },
+  __self: undefined
+}, __jsx("a", {
+  style: linkStyle,
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 14
+  },
+  __self: undefined
+}, "Theme")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+  href: "/input",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 16
+  },
+  __self: undefined
+}, __jsx("a", {
+  style: linkStyle,
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 17
+  },
+  __self: undefined
+}, "Input")));
 
 /* harmony default export */ __webpack_exports__["default"] = (Header);
 
@@ -2002,71 +2030,63 @@ module.exports = __webpack_require__(/*! ./dist/client/link */ "./node_modules/n
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _components_MyLayout__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/MyLayout */ "./components/MyLayout.js");
-/* harmony import */ var unfetch__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! unfetch */ "unfetch");
-/* harmony import */ var unfetch__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(unfetch__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var swr__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! swr */ "swr");
-/* harmony import */ var swr__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(swr__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! isomorphic-unfetch */ "isomorphic-unfetch");
+/* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _components_MyLayout__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/MyLayout */ "./components/MyLayout.js");
 var _jsxFileName = "/home/gwl/SAMANDAR/next-training/pages/index.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+//import fetch from 'unfetch';
+//import useSWR from 'swr';
 
 
- // import fetch from 'isomorphic-unfetch';
-// const Index = ({ stars }) => {
-//   return (
-//     <MyLayout>
-//       <p>Next stars: {stars}</p>
-//     </MyLayout>
-//   );
-// };
-// Index.getInitialProps = async ({ req }) => {
-//   const res = await fetch('https://api.github.com/repos/zeit/next.js');
-//   const json = res.json();
-//   return { stars: json.stargazers_count };
-// };
 
-const API_URL = 'https://api.github.com';
+const Index = ({
+  stars
+}) => {
+  return __jsx(_components_MyLayout__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 7
+    },
+    __self: undefined
+  }, __jsx("p", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 8
+    },
+    __self: undefined
+  }, "Next stars: ", stars));
+};
 
-const fetcher = async path => {
-  const res = await unfetch__WEBPACK_IMPORTED_MODULE_2___default()(API_URL + path);
+Index.getInitialProps = async ({
+  req
+}) => {
+  const res = await isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_1___default()('https://api.github.com/repos/zeit/next.js');
   const json = await res.json();
-  return json;
-};
+  return {
+    stars: json.stargazers_count
+  };
+}; //////////////////////////////////////
+// const API_URL = 'https://api.github.com';
+// const fetcher = async path => {
+//   const res = await fetch(API_URL + path);
+//   const json = await res.json();
+//   return json;
+// };
+// const Index = () => {
+//   const { data, error } = useSWR('/repos/zeit/next.js', fetcher);
+//   if (error) return <div>failed to load</div>;
+//   if (!data) return <div>loading...</div>;
+//   return <div>Next stars: {data.stargazers_count}</div>;
+// };
 
-const Index = () => {
-  const {
-    data,
-    error
-  } = swr__WEBPACK_IMPORTED_MODULE_3___default()('/repos/zeit/next.js', fetcher);
-  if (error) return __jsx("div", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 25
-    },
-    __self: undefined
-  }, "failed to load");
-  if (!data) return __jsx("div", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 26
-    },
-    __self: undefined
-  }, "loading...");
-  return __jsx("div", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 27
-    },
-    __self: undefined
-  }, "Next stars: ", data.stargazers_count);
-};
 
 /* harmony default export */ __webpack_exports__["default"] = (Index);
 
 /***/ }),
 
-/***/ 4:
+/***/ 6:
 /*!******************************!*\
   !*** multi ./pages/index.js ***!
   \******************************/
@@ -2188,6 +2208,17 @@ module.exports = require("core-js/library/fn/weak-map");
 
 /***/ }),
 
+/***/ "isomorphic-unfetch":
+/*!*************************************!*\
+  !*** external "isomorphic-unfetch" ***!
+  \*************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("isomorphic-unfetch");
+
+/***/ }),
+
 /***/ "prop-types":
 /*!*****************************!*\
   !*** external "prop-types" ***!
@@ -2229,28 +2260,6 @@ module.exports = require("react");
 /***/ (function(module, exports) {
 
 module.exports = require("react-is");
-
-/***/ }),
-
-/***/ "swr":
-/*!**********************!*\
-  !*** external "swr" ***!
-  \**********************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = require("swr");
-
-/***/ }),
-
-/***/ "unfetch":
-/*!**************************!*\
-  !*** external "unfetch" ***!
-  \**************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = require("unfetch");
 
 /***/ }),
 
